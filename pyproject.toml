@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencandles"
+version = "0.1.0"
+description = "A modular TradingView-style desktop charting application"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "pyqt6>=6.6",
+    "pyqtgraph>=0.13.7",
+]
+
+[project.scripts]
+opencandles = "opencandles.app:main"
+
+[tool.setuptools.packages.find]
+include = ["opencandles*"]
+
+[tool.uv]
+package = true
