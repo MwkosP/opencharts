@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from opencandles.core.indicators import bollinger, heikin_ashi, sma
+from chartist.core.indicators import bollinger, heikinAshi, sma
 
 
 class IndicatorTests(unittest.TestCase):
@@ -28,7 +28,7 @@ class IndicatorTests(unittest.TestCase):
         }
         before = {name: values.copy() for name, values in raw.items()}
 
-        display = heikin_ashi(raw)
+        display = heikinAshi(raw)
 
         for name in raw:
             np.testing.assert_array_equal(raw[name], before[name])

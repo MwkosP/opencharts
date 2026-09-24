@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from opencandles.core.series import Series
+from chartist.core.series import Series
 
 
 class FakeMarket:

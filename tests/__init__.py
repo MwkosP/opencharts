@@ -1,1 +1,1 @@
-"""OpenCandles test suite."""
+"""Chartist test suite."""

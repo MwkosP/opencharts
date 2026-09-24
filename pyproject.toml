@@ -3,21 +3,27 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "opencandles"
+name = "chartist"
 version = "0.1.0"
 description = "A modular TradingView-style desktop charting application"
+readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "matplotlib>=3.10.9",
     "numpy>=1.26",
+    "pyopengl>=3.1.10",
     "pyqt6>=6.6",
     "pyqtgraph>=0.13.7",
 ]
 
 [project.scripts]
-opencandles = "opencandles.app:main"
+chartist = "chartist.app:main"
 
 [tool.setuptools.packages.find]
-include = ["opencandles*"]
+include = ["chartist*"]
+
+[tool.setuptools.package-data]
+chartist = ["assets/*"]
 
 [tool.uv]
 package = true
